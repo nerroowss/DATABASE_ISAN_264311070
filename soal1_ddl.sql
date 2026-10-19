@@ -1,5 +1,5 @@
 -- =====================================================
--- SOAL 1: Data Definition & Relasi [Bobot: 40%]
+-- SOAL 1: Data Definition & Relasi
 -- (SCPMK0720801 - DDL & Relasi)
 -- Pembuatan struktur fisik dan ketepatan relasi
 -- Nama : Ikhzaniero Ardyana Juniar | NIM : 264311070
