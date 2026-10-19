@@ -38,9 +38,7 @@
 ## Bukti Soal 3 (Query Kompleks & Agregasi)
 
 ### Data sumber
-![data sumber](soal3_1_data_sumber.png)
+![data sumber](bukti/soal3_1_data_sumber.png)
 
 ### Hasil query laporan
-![hasil query](soal3_2_hasil_query.png)
-
-Query memuat SELECT (kolom induk + COUNT/AVG), JOIN, WHERE, dan GROUP BY dalam satu perintah.
+![hasil query](bukti/soal3_2_hasil_query.png)
