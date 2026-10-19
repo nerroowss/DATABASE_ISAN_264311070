@@ -34,3 +34,13 @@
 ### 4. DELETE - dengan WHERE
 ![delete](bukti/soal2_8_delete.png)
 ![sesudah delete](bukti/soal2_9_sesudah_delete.png)
+
+## Bukti Soal 3 (Query Kompleks & Agregasi)
+
+### Data sumber
+![data sumber](soal3_1_data_sumber.png)
+
+### Hasil query laporan
+![hasil query](soal3_2_hasil_query.png)
+
+Query memuat SELECT (kolom induk + COUNT/AVG), JOIN, WHERE, dan GROUP BY dalam satu perintah.
