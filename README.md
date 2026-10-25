@@ -42,3 +42,24 @@
 
 ### Hasil query laporan
 ![hasil query](bukti/soal3_2_hasil_query.png)
+
+
+## 3. Pemodelan Fisik: Implementasi Tabel riwayat_notifikasi (uts.sql)
+
+### 1. Data tabel induk (detail_pelanggaran)
+![data induk](bukti_uts/uts_1_data_detail_pelanggaran.png)
+
+### 2. CREATE TABLE riwayat_notifikasi
+![create table](bukti_uts/uts_2_create_table.png)
+
+### 3. INSERT data
+![insert](bukti_uts/uts_3_insert.png)
+
+### 4. Isi tabel
+![isi tabel](bukti_uts/uts_4_isi_tabel.png)
+
+### 5. Struktur tabel (Primary Key)
+![struktur](bukti_uts/uts_5_struktur.png)
+
+### 6. Relasi (Foreign Key)
+![relasi](bukti_uts/uts_6_relasi.png)
