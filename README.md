@@ -63,3 +63,48 @@
 
 ### 6. Relasi (Foreign Key)
 ![relasi](bukti_uts/uts_6_relasi.png)
+
+
+# UTS: Fitur Riwayat Notifikasi Tilang
+
+## 1. Pemodelan Konseptual: ERD Fitur Riwayat Notifikasi Tilang
+
+```mermaid
+erDiagram
+    KAMERA ||--o{ DETAIL_PELANGGARAN : menangkap
+    ATURAN_PASAL ||--o{ DETAIL_PELANGGARAN : mengatur
+    DETAIL_PELANGGARAN ||--o{ RIWAYAT_NOTIFIKASI : memiliki
+
+    KAMERA {
+        varchar id_kamera PK
+        varchar lokasi_kamera
+        int batas_kecepatan
+    }
+    ATURAN_PASAL {
+        varchar kode_pelanggaran PK
+        varchar kategori_pelanggaran
+        varchar pasal_pelanggaran
+    }
+    DETAIL_PELANGGARAN {
+        varchar no_referensi_sistem PK
+        varchar id_kamera FK
+        varchar kode_pelanggaran FK
+        varchar nomor_polisi
+        datetime waktu_capture
+        int kecepatan
+        varchar status_verifikasi
+    }
+    RIWAYAT_NOTIFIKASI {
+        int id_notifikasi PK
+        varchar no_referensi_sistem FK
+        varchar media_kirim
+        datetime tgl_kirim
+        varchar status_kirim
+        varchar keterangan
+    }
+```
+
+**Aturan bisnis:**
+1. Satu pelanggaran dapat memiliki banyak notifikasi (pengiriman ulang jika gagal).
+2. Satu notifikasi hanya milik satu pelanggaran.
+3. Status notifikasi: Terkirim, Gagal, atau Diterima.
