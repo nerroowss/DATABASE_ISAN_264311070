@@ -2,7 +2,6 @@
 -- UTS: Penambahan Fitur Riwayat Notifikasi Tilang
 -- Nama : Ikhzaniero Ardyana Juniar | NIM : 264311070
 -- Versi bergambar (Pemodelan Konseptual & Pemodelan Logis): bisa dilihat README_UTS_SQL_FITUR_RIWAYAT_NOTIFIKASI_TILANG.md
--- Dijalankan setelah soal1_ddl.sql dan soal2_crud.sql
 -- =====================================================
 
 USE etle_db_uts;
