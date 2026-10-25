@@ -91,9 +91,20 @@ Setiap sel hanya berisi satu nilai (atomik), satu baris per pengiriman:
 Kandidat Primary Key: (no_referensi_sistem, media_kirim, tgl_kirim).
 
 ### 2NF
-Ketergantungan parsial: nomor_polisi, kategori_pelanggaran, pasal, id_kamera, dan lokasi_kamera hanya bergantung pada `no_referensi_sistem` (sebagian dari PK). Tabel dipecah:
-- `detail_pelanggaran` (PK: no_referensi_sistem)
-- `riwayat_notifikasi` (PK: id_notifikasi, FK: no_referensi_sistem)
+Ketergantungan parsial: nomor_polisi, kode_pelanggaran, kategori_pelanggaran, pasal, id_kamera, lokasi_kamera, dan batas_kecepatan hanya bergantung pada `no_referensi_sistem` (sebagian dari PK). Tabel dipecah:
+
+**Tabel `detail_pelanggaran`** (PK: no_referensi_sistem)
+
+| no_referensi_sistem | nomor_polisi | kode_pelanggaran | kategori_pelanggaran | pasal | id_kamera | lokasi_kamera | batas_kecepatan |
+|---|---|---|---|---|---|---|---|
+| 910-50639-AE1270CR | AE1270CR | PLG-01 | Melanggar Batas Kecepatan | Pasal 287 (5) jo Pasal 106 | CAM-TOL-548 | SPEEDCAM TOL KM 548+450 A JSN | 120 |
+
+**Tabel `riwayat_notifikasi`** (PK: id_notifikasi, FK: no_referensi_sistem)
+
+| id_notifikasi | no_referensi_sistem | media_kirim | tgl_kirim | status_kirim |
+|---|---|---|---|---|
+| 1 | 910-50639-AE1270CR | WhatsApp | 2026-03-05 | Gagal |
+| 2 | 910-50639-AE1270CR | Pos | 2026-03-06 | Diterima |
 
 ### 3NF
 Ketergantungan transitif dipisah:
