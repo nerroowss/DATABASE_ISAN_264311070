@@ -127,8 +127,6 @@ Pemodelan fisik menerjemahkan skema logis 3NF menjadi tabel nyata di MySQL (DDL)
 
 **Bukti Primary Key pada tabel riwayat_notifikasi**
 
-Kolom `id_notifikasi` bertanda kunci kuning sebagai Primary Key (tipe INT, AUTO_INCREMENT). Kolom `no_referensi_sistem` bertanda ikon abu-abu sebagai Foreign Key.
-
 ![primary key](bukti_uts/uts_5_struktur.png)
 
 ---
@@ -136,8 +134,6 @@ Kolom `id_notifikasi` bertanda kunci kuning sebagai Primary Key (tipe INT, AUTO_
 ### B. Foreign Key
 
 **Bukti Foreign Key pada Relation view**
-
-Constraint `riwayat_notifikasi_ibfk_1` menghubungkan kolom `no_referensi_sistem` ke tabel `detail_pelanggaran` kolom `no_referensi_sistem`, sehingga setiap notifikasi harus mengacu ke pelanggaran yang ada.
 
 ![foreign key](bukti_uts/uts_6_relasi.png)
 
@@ -147,18 +143,12 @@ Constraint `riwayat_notifikasi_ibfk_1` menghubungkan kolom `no_referensi_sistem`
 
 **Deklarasi constraint pada CREATE TABLE**
 
-Tabel dibuat dengan constraint NOT NULL, DEFAULT (`status_kirim` bernilai Terkirim), serta CHECK `chk_media` (Pos, SMS, WhatsApp, Email) dan `chk_status_kirim` (Terkirim, Gagal, Diterima).
-
 ![create table](bukti_uts/uts_2_create_table.png)
 
 **Pengujian constraint chk_media**
 
-Data dengan `media_kirim` bernilai Telegram ditolak karena tidak termasuk daftar media yang diizinkan (error #3819, Check constraint chk_media is violated).
-
 ![uji chk_media](bukti_uts/uts_7_uji_chk_media.png)
 
 **Pengujian constraint chk_status_kirim**
-
-Data dengan `status_kirim` bernilai Pending ditolak karena tidak termasuk daftar status yang diizinkan (error #3819, Check constraint chk_status_kirim is violated).
 
 ![uji chk_status](bukti_uts/uts_8_uji_chk_status.png)
